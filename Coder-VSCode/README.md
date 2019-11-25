@@ -3,6 +3,7 @@
 This is my version of a compose file for Coder which is basically Visual Studio Code in a container that you can access from a web browser.
 
 [Coder on Docker Hub](https://hub.docker.com/r/codercom/code-server)
+
 [Coder on GitHub](https://github.com/cdr/code-server)
 
 ## Environment Variables
