@@ -1,0 +1,17 @@
+version: '2'
+services:
+  coder:
+    image: codercom/code-server:v2
+    container_name: vscode
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    volumes:
+      - ${DOCKERDIR}/coderdata:/home/coder/share/code-server
+      - ${DOCKERDIR}/coder:/home/coder/project
+    environment:
+      - PASSWORD=someSecurePassword
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    command: --disable-telemetry --auth=password
